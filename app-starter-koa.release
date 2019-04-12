@@ -1,0 +1,19 @@
+# 请参考 https://help.aliyun.com/document_detail/59293.html 了解更多关于release文件的编写方式
+
+# 构建源码语言类型
+code.language=node8.x
+
+# 使用自定义的构建镜像
+build.image=registry.cn-hangzhou.aliyuncs.com/weidian-lab/rdc-build@sha256:79d4286563310525d5b8964ee4f8b988b2f8c4433377eda50dfed6cefc90c54d
+
+# 测试环境执行脚本
+testing.build.command=sh ./bin/test.sh
+
+# docker构建所用的Dockerfile的路径
+docker.file=Dockerfile
+
+# Docker镜像构建之后push的仓库地址
+docker.repo=registry.cn-hangzhou.aliyuncs.com/weidian-lab/app-starter-koa
+
+# Docker镜像在vpc内pull的地址
+docker.repo.pull=registry-vpc.cn-hangzhou.aliyuncs.com/weidian-lab/app-starter-koa
